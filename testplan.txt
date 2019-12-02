@@ -1,0 +1,9 @@
+Test Plan:
+The test plan that we decided to do involves how long it would take to find the target depending on the size of the array. To begin, we are dividing the 20,000-element array into separate parts. When we search for the target, we are searching in an array size of 250, from index 0 to 249. When that finishes, we are going to run the next test which will be a size of 500 elements, ranging from index 0 to 499. The following will be a size 750 elements and we will continue to do this until it reaches 20,000 elements. This will occur 80 times.
+We created a struct of arrays that holds information on the size that is being tested, the index in which the target is found, the number of workers, and the time it takes to complete the search. After we run the search using threads or processes, it will output the average, min, max, and standard deviation of the time it takes to find the target. For each iteration our array of structs will store all fields for that specific test in the respective index. After everything is stored, it will print out what information is collected in the form:
+“Array of size X takes Y milliseconds to locate target
+Number of workers: M
+Index of target (N) is found in: K
+Average time locate target: P milliseconds
+Standard deviation: A milliseconds
+Min: J milliseconds, Max: H milliseconds “
